@@ -6,11 +6,8 @@ import { appTitle} from './components/title.component'
   selector: 'to-do-app',
   standalone: true,
   imports: [RouterOutlet, appTitle],
-  template: `
-    <app-title></app-title>
-  `,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+
 })
 export class AppComponent {
   title = 'to-do-app';

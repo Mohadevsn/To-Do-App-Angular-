@@ -1,12 +1,24 @@
-<h4>Task(S)</h4>
+<h4>Task(s)</h4>
 
 <div class="container">
-    <ul>
-        <div class="task" *ngFor="let item of items" >
-            <input type="checkbox" name="" id="" *ngIf="item.isComplete" checked>
-            <input type="checkbox" name="" id="" *ngIf="!item.isComplete" >
-            <li *ngIf="item.isComplete" style="text-decoration: line-through;">{{item.text}}</li>
-            <li *ngIf="!item.isComplete">{{item.text}}</li>
-        </div>
-    </ul>
+    <div class="left--box">
+        <ul>
+            <div class="task" *ngFor="let item of items" >
+                <input type="checkbox" name="" id="" *ngIf="item.isComplete" checked>
+                <input type="checkbox" name="" id="" *ngIf="!item.isComplete" (checked)="item.completeTask()" >
+                <li *ngIf="item.isComplete" style="text-decoration: line-through;">{{item.text}}</li>
+                <li *ngIf="!item.isComplete">{{item.text}}</li>
+            </div>
+        </ul>
+    </div>
+
+    <div class="right--box">
+        <h4>Add new task</h4>
+        <form (submit)="onSubmit()">
+
+        </form>
+        title: <input  type="text" name="title" id="">
+        
+    </div>
+    
 </div>

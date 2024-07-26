@@ -3,6 +3,8 @@ export class wishList{
 
     }
 
-    
+    completeTask(){
+        this.isComplete = true;
+    }
 
 }
