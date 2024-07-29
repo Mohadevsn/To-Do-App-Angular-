@@ -1,6 +1,7 @@
 import { Component, input } from "@angular/core";
 import {wishList} from "../models/wishList"
 import { CommonModule } from "@angular/common";
+import test from "node:test";
 
 
 @Component({
@@ -12,13 +13,26 @@ import { CommonModule } from "@angular/common";
 })
 
 export class toDoBox{
-    items = [
-        new wishList('Learn Angular '),
-        new wishList('learn Laravel', true),
-        new wishList('graduate', true)
-    ]
+    toDos: Array <{done: boolean, title: string}> = [];
+
 
     onSubmit(){
         return "good";
     }
+
+    addItem( title: string){
+        this.toDos.push({done: false, title: title});
+    }
+
+    toggle(index: any){
+        if(this.toDos[index] ){
+            this.toDos[index].done = false;
+        }
+        this.toDos[index].done = true;
+
+    }
+
+    // completeTask(){
+    //     this.isComplete = true;
+    // }
 }

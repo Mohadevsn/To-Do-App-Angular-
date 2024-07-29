@@ -1,10 +1,8 @@
 export class wishList{
-    constructor(public text : string, public isComplete: boolean = false){
+    constructor(public title : string, public done: boolean = false){
 
     }
 
-    completeTask(){
-        this.isComplete = true;
-    }
+    
 
 }
