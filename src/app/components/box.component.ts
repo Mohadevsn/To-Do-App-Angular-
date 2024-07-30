@@ -50,7 +50,7 @@ export class Box{
         if(this.toDos[index].done ){
             this.toDos[index].done = false;
             console.log('false');
-            
+            this.numberTaskDone--;
         }
         else if(!this.toDos[index].done ){
             this.toDos[index].done = true;
@@ -66,6 +66,7 @@ export class Box{
         if((this.numberTask !== 0 ) &&(this.numberTask == this.numberTaskDone)){
             console.log('start to clear .....');
             window.setTimeout(this.clearTask, 1000);
+            this.numberTask = 0;
             // setTimeout( this.clearTask, 3000);
             console.log('clearing completed');
             
@@ -73,11 +74,4 @@ export class Box{
 
     }
 
-   
-
-    
-
-    // completeTask(){
-    //     this.isComplete = true;
-    // }
 }
