@@ -24,9 +24,7 @@ export class Box{
     numberTask: number = 0 ;
     numberTaskDone: number = 0;
 
-    onSubmit(){
-        return "good";
-    }
+
 
     /**
      * The `addItem` function in TypeScript adds a new task with a given title to a list of to-dos and
