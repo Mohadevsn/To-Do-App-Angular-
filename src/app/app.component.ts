@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { appTitle} from './components/title.component';
-import { toDoBox} from './components/to-do-box.component';
+import { Box} from './components/box.component';
 import { wishList } from './models/wishList';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, appTitle, toDoBox, CommonModule],
+  imports: [RouterOutlet, appTitle, Box, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
