@@ -27,6 +27,12 @@ export class toDoBox{
         this.numberTask++;
     }
 
+    clearTask(this: toDoBox): void{
+        this.toDos = [] ;
+        console.log("clearing up")
+        
+    }
+
     toggle(index: any){
         if(this.toDos[index].done ){
             this.toDos[index].done = false;
@@ -41,13 +47,18 @@ export class toDoBox{
         }
 
         if((this.numberTask !== 0 ) &&(this.numberTask == this.numberTaskDone)){
-            // setTimeout(1000);
-            this.toDos = [] ;
-            console.log("clearing up")
+            console.log('start to clear .....');
+            window.setTimeout(this.clearTask, 1000);
+            // setTimeout( this.clearTask, 3000);
+            console.log('clearing completed');
+            
         }
 
-
     }
+
+   
+
+    
 
     // completeTask(){
     //     this.isComplete = true;
